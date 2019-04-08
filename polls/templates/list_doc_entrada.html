@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h2> Listando entrada </h2>
+	<p>
+		<a href="{% url anexarEntrada%}" class="btn btn-primary">
+			Adicionar entrada de documento
+		</a>
+	</p>
+	<table class="table mb-0"> <!-- criar a tabela Responsivamente -->
+		<thead>
+
+<!-- livroEntrada("numeroEntrada","dataEntrada","numeroDocumento","dataDocumento","providencia","assunto","classificacao","obsevacao","documento"
+-->
+			<tr>
+				<th>Número de entrada</th>
+				<th>Data da Entrada</th>
+				<th>Número de documento</th>
+				<th>Data documento</th>
+				<th>Proveniência</th>
+				<th>Assunto</th>
+				<th>Classificação</th>
+				<th>Observação</th>
+				<th>documento</th>
+			</th>
+		</thead>
+		<tbody>
+			{% for entrada in entradas %}
+				<tr>
+					<td>{{entrada.numeroEntrada}}</td>
+					<td>{{entrada.dataEntrada}}</td>
+					<td>{{entrada.numeroDocumento}}</td>
+					<td>{{entrada.dataDocumento}}</td>
+					<td>{{entrada.proveniencia}}</td>
+					<td>{{entrada.assunto}}</td>
+					<td>{{entrada.classificacao}}</td>
+					<td>{{entrada.observacao}}</td>
+					<td>
+						<a href="{{entrada.documento.url}}" class="btn btn-primary btn-sm" target="_blank">
+							Baixar documento
+						</a>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+<!--
+	<form method="post" enctype="multipart/form-data">
+		{"% csrf_token %}
+		<input type="file" name="document"> 
+		<button type="submit"> Anexar documento </button>
+	</form>
+-->
+<!--
+	{"% if url %}
+
+		<p> Documento anexado:
+			<a href="{ url }}">
+				{ url }}</a>
+		</p>
+	{"% endif %}
+	-->
+	<h2> Anexar documento </h2>
+{% endblock %}
+

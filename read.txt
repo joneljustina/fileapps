@@ -1,0 +1,32 @@
+
+https://devcenter.heroku.com/articles/multiple-environments
+
+git remote add heroku https://git.heroku.com/dcimoz.git
+fatal: remote heroku already exists.
+
+
+git remote
+heroku
+origin
+
+
+ git remote show https://git.heroku.com/dcimoz.git
+=>
+* remote https://git.heroku.com/dcimoz.git
+  Fetch URL: https://git.heroku.com/dcimoz.git
+  Push  URL: https://git.heroku.com/dcimoz.git
+  HEAD branch: (unknown)
+
+
+git remote add [<options>] <name> <url>
+
+git remote add master https://git.heroku.com/dcimoz.git 
+
+git remote 
+
+=>
+
+heroku
+master
+origin
+

@@ -1,4 +1,12 @@
 
+heroku git:remote --app dcimoz
+set git remote heroku to https://git.heroku.com/dcimoz.git
+
+heroku git:clone --app dcimoz
+Cloning into 'dcimoz'...
+warning: You appear to have cloned an empty repository.
+
+
 https://devcenter.heroku.com/articles/multiple-environments
 
 git remote add heroku https://git.heroku.com/dcimoz.git

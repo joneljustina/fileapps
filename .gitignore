@@ -3,4 +3,6 @@
 .vEnvfile
 *pyc
 .env
+venv
+.venv3
 
